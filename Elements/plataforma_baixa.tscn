@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://2batckm74j5a"]
+
+[ext_resource type="PackedScene" uid="uid://e4s0suuorxqi" path="res://Models/structure-platform-dock.glb" id="1_053hs"]
+
+[node name="Plataforma_Baixa" instance=ExtResource("1_053hs")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtbf38dedeu10"]
+
+[ext_resource type="PackedScene" uid="uid://cmc2qf6isxnih" path="res://Models/structure.glb" id="1_btmo0"]
+
+[node name="Plataforma_Alta" instance=ExtResource("1_btmo0")]

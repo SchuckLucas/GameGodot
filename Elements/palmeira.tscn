@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8x6fasy7667j"]
+
+[ext_resource type="PackedScene" uid="uid://bhj7yytb3w6ig" path="res://Models/palm-detailed-bend.glb" id="1_i33tg"]
+
+[node name="Palmeira" instance=ExtResource("1_i33tg")]

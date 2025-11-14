@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnm1e24egyitl"]
+
+[ext_resource type="PackedScene" uid="uid://bf6q6me7bgmae" path="res://Models/patch-grass.glb" id="1_toic3"]
+
+[node name="Ilha_Grama" instance=ExtResource("1_toic3")]
