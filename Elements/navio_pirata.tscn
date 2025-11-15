@@ -3,3 +3,5 @@
 [ext_resource type="PackedScene" uid="uid://ui2k4ru2b4w4" path="res://Models/ship-pirate-small.glb" id="1_t37jl"]
 
 [node name="Navio_Pirata" instance=ExtResource("1_t37jl")]
+collision_layer = 2
+collision_mask = 0

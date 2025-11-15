@@ -3,3 +3,5 @@
 [ext_resource type="PackedScene" uid="uid://dpl5gmc8oobbx" path="res://Models/tool-shovel.glb" id="1_1xyrl"]
 
 [node name="Pá" instance=ExtResource("1_1xyrl")]
+collision_layer = 8
+collision_mask = 0

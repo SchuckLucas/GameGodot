@@ -1,13 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cyaca23edfacd"]
+[gd_scene load_steps=5 format=3 uid="uid://cyaca23edfacd"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvrkj"]
-transparency = 1
-albedo_color = Color(0, 0.37254903, 1, 1)
-metallic = 0.8
-stencil_flags = 2
+[ext_resource type="Script" uid="uid://desnb2vc10buf" path="res://Scripts/água.gd" id="1_3rjj8"]
+[ext_resource type="Material" uid="uid://cjvysjhw8pc5y" path="res://Materials/água.tres" id="2_ggbjl"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_3rjj8"]
-material = SubResource("StandardMaterial3D_gvrkj")
+[sub_resource type="BoxMesh" id="BoxMesh_la673"]
+material = ExtResource("2_ggbjl")
 
-[node name="Água" type="MeshInstance3D"]
-mesh = SubResource("PlaneMesh_3rjj8")
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ggbjl"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Água" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_3rjj8")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_la673")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, -0.5, 0)
+shape = SubResource("ConcavePolygonShape3D_ggbjl")
