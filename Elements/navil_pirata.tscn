@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccasncvh2ihqq"]
-
-[ext_resource type="PackedScene" uid="uid://ui2k4ru2b4w4" path="res://Models/ship-pirate-small.glb" id="1_b3wiv"]
-
-[node name="Navil_Pirata" instance=ExtResource("1_b3wiv")]

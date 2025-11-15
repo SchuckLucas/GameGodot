@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5pujp05bfwtb"]
+[gd_scene load_steps=5 format=3 uid="uid://c5pujp05bfwtb"]
+
+[ext_resource type="Script" uid="uid://xfgu0c8n24c8" path="res://Scripts/player.gd" id="1_sor1j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tl1vq"]
 albedo_color = Color(0.1733627, 0.5151142, 0.99999994, 1)
@@ -11,11 +13,14 @@ material = SubResource("StandardMaterial3D_tl1vq")
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y2lmi"]
 
 [node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_sor1j")
 
 [node name="CameraPivot" type="Node3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 
 [node name="Camera" type="Camera3D" parent="CameraPivot"]
+unique_name_in_owner = true
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, 0)
@@ -24,3 +29,7 @@ mesh = SubResource("CapsuleMesh_sor1j")
 [node name="Collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, 0)
 shape = SubResource("CapsuleShape3D_y2lmi")
+
+[node name="TimerDash" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true

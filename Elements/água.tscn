@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyaca23edfacd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvrkj"]
+transparency = 1
+albedo_color = Color(0, 0.37254903, 1, 1)
+metallic = 0.8
+stencil_flags = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3rjj8"]
+material = SubResource("StandardMaterial3D_gvrkj")
+
+[node name="Água" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_3rjj8")
