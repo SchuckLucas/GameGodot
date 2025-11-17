@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyaca23edfacd"]
+
+[ext_resource type="Script" uid="uid://desnb2vc10buf" path="res://Scripts/água.gd" id="1_3rjj8"]
+[ext_resource type="Material" uid="uid://cjvysjhw8pc5y" path="res://Materials/água.tres" id="2_ggbjl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_la673"]
+material = ExtResource("2_ggbjl")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ggbjl"]
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
+[node name="Água" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_3rjj8")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_la673")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, -0.5, 0)
+shape = SubResource("ConvexPolygonShape3D_ggbjl")

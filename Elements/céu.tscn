@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://boewwlmbhsikt"]
+
+[ext_resource type="Script" uid="uid://75i553xujnf0" path="res://Scripts/sol.gd" id="1_wg0fq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ma7l1"]
+sky_top_color = Color(0.26765555, 0.58812135, 1, 1)
+sky_horizon_color = Color(0.6016181, 0.69837993, 1, 1)
+sky_curve = 0.2
+ground_bottom_color = Color(0, 1, 0.37254903, 1)
+ground_horizon_color = Color(0, 1, 0.41960785, 1)
+ground_curve = 0.4
+energy_multiplier = 2.0
+
+[sub_resource type="Sky" id="Sky_ic0uy"]
+sky_material = SubResource("ProceduralSkyMaterial_ma7l1")
+
+[sub_resource type="Environment" id="Environment_3qyps"]
+background_mode = 2
+background_energy_multiplier = 0.3
+sky = SubResource("Sky_ic0uy")
+ambient_light_source = 2
+ambient_light_color = Color(0.77708066, 1, 0.8272815, 1)
+ambient_light_energy = 0.1
+tonemap_mode = 2
+
+[node name="Céu" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+unique_name_in_owner = true
+environment = SubResource("Environment_3qyps")
+
+[node name="Sol" type="DirectionalLight3D" parent="."]
+light_color = Color(1, 1, 0.6666667, 1)
+light_energy = 1.5
+shadow_enabled = true
+shadow_opacity = 0.5
+script = ExtResource("1_wg0fq")

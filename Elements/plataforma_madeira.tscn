@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://kbfiv6db88p"]
+
+[ext_resource type="PackedScene" uid="uid://2s3oydwmswsj" path="res://Models/platform.glb" id="1_lxvg2"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lxvg2"]
+points = PackedVector3Array(-1.2697382, 0.21933836, -1.2762412, 1.2824905, 0.21933836, 1.2762412, 0.9634619, 0.2592365, 1.2762412, -1.2697382, -0.01994127, 1.2762412, 1.2824905, -0.01994127, -1.2762412, 0.8835174, 0.2592365, -1.2762412, 1.2824905, -0.01994127, 1.2762412, -1.2697382, -0.01994127, -1.2762412, -1.2697382, 0.21933836, 1.2762412, 1.2824905, 0.21933836, -1.2762412, 0.28543246, 0.2592365, -0.99690723, 0.36487734, 0.2592365, 1.2762412, 0.28543246, 0.2592365, -1.2762412, 0.92348963, 0.2592365, -0.67784697, 0.3251549, 0.2592365, 0.6381206, 0.9634619, 0.2592365, 0.95718086)
+
+[node name="Plataforma_Madeira" instance=ExtResource("1_lxvg2")]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_lxvg2")

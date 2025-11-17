@@ -1,0 +1,74 @@
+[gd_scene load_steps=14 format=3 uid="uid://cuc3r25pwe5cw"]
+
+[ext_resource type="PackedScene" uid="uid://c8x6fasy7667j" path="res://Elements/palmeira.tscn" id="2_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://c4u3k7678nafq" path="res://Elements/barco.tscn" id="2_wse8f"]
+[ext_resource type="PackedScene" uid="uid://banu5dydm3u58" path="res://Elements/ilha_areia.tscn" id="3_dwbse"]
+[ext_resource type="PackedScene" uid="uid://dtbf38dedeu10" path="res://Elements/plataforma_alta.tscn" id="6_2o6r5"]
+[ext_resource type="PackedScene" uid="uid://2batckm74j5a" path="res://Elements/plataforma_baixa.tscn" id="7_70uel"]
+[ext_resource type="PackedScene" uid="uid://kbfiv6db88p" path="res://Elements/plataforma_madeira.tscn" id="8_wse8f"]
+[ext_resource type="PackedScene" uid="uid://eqmqs5hvqoj3" path="res://Elements/navio.tscn" id="10_ic0uy"]
+[ext_resource type="PackedScene" uid="uid://cyaca23edfacd" path="res://Elements/água.tscn" id="10_wse8f"]
+[ext_resource type="PackedScene" uid="uid://ds6m3w4y1xf5a" path="res://Elements/bandeira.tscn" id="11_2o6r5"]
+[ext_resource type="PackedScene" uid="uid://c5pujp05bfwtb" path="res://Actors/player.tscn" id="11_ic0uy"]
+[ext_resource type="PackedScene" uid="uid://boewwlmbhsikt" path="res://Elements/céu.tscn" id="11_k3n1d"]
+[ext_resource type="PackedScene" uid="uid://bnm1e24egyitl" path="res://Elements/ilha_grama.tscn" id="12_2o6r5"]
+[ext_resource type="PackedScene" uid="uid://rk62syn42j6m" path="res://Elements/chao.tscn" id="12_k3n1d"]
+
+[node name="World" type="Node3D"]
+
+[node name="Céu" parent="." instance=ExtResource("11_k3n1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+
+[node name="Ilha_Areia" parent="." instance=ExtResource("3_dwbse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.041282654, 0)
+
+[node name="Player" parent="." instance=ExtResource("11_ic0uy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6486491, 0)
+
+[node name="Palmeira" parent="." instance=ExtResource("2_tlwt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9923954, 0.25000048, -1.5452008)
+
+[node name="Barco" parent="." instance=ExtResource("2_wse8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8641672, -0.037908316, 6.5285845)
+
+[node name="Água" parent="." instance=ExtResource("10_wse8f")]
+transform = Transform3D(50, 0, 0, 0, 5.2, 0, 0, 0, 50, 0, 0, 0)
+
+[node name="Plataforma_Baixa" parent="." instance=ExtResource("7_70uel")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, -1, 0, 12)
+
+[node name="Plataforma_Baixa2" parent="." instance=ExtResource("7_70uel")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 0, 20)
+
+[node name="Plataforma_Madeira" parent="." instance=ExtResource("8_wse8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 24)
+
+[node name="Plataforma_Alta" parent="." instance=ExtResource("6_2o6r5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 26)
+
+[node name="Plataforma_Baixa3" parent="." instance=ExtResource("7_70uel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1, 21)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 26, 6, 17)
+light_energy = 10.0
+shadow_enabled = true
+spot_range = 10.0
+
+[node name="Chao" parent="." instance=ExtResource("12_k3n1d")]
+transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 50, 0, -5, 0)
+
+[node name="Navio" parent="." instance=ExtResource("10_ic0uy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.527924, 1.1920929e-06, 16.276491)
+
+[node name="Ilha_Grama" parent="." instance=ExtResource("12_2o6r5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.090315, 0, 1.1837528)
+
+[node name="Bandeira" parent="." instance=ExtResource("11_2o6r5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.863636, 0.292943, 0.66358685)
+
+[node name="Barco2" parent="." instance=ExtResource("2_wse8f")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.07427, 6.7679196e-17, -0.41489658)
+
+[node name="Plataforma_Madeira2" parent="." instance=ExtResource("8_wse8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1630945, 1.1920929e-06, -2.3609257)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://rk62syn42j6m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jrtd3"]
+cull_mode = 2
+albedo_color = Color(0.6486461, 0.56284565, 0.1748516, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7jleu"]
+material = SubResource("StandardMaterial3D_jrtd3")
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_jrtd3"]
+
+[node name="Chao" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_7jleu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_jrtd3")
